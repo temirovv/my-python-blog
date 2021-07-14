@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		Welcome to my blog
+	</title>
+	  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid p-1 pl-5 bg-dark" style="color: darkgray;font-family: 'Crimson Text', serif, cursive;font-size:26px;">
+  <br>
+  <p>Salom do‘stlar sizlarni mening Python blogimda ko‘rib turganimdan xursandman,
+  Men bu yerda o‘zimning Python dasturlash tilidagi bilimlarimni sizlar bilan ulashaman 
+  har kuni chiqadigan yangi maqola va kichik darslar sizlar uchun
+	</p>
+</div>
+
+<nav class="navbar navbar-expand-px p-2 bg-primary sticky-top">
+	
+	<ul class="pagination">
+		<li class="page-item "><a class="page-link" href="{% url 'home' %}" data-toggle="home" title="Asosiy sahifa"><i class="fa fa-home" style="font-size:24px;"></i> Bosh sahifa</a></li>
+
+    <li class="page-item "><a class="page-link" href="https://t.me/Age_Of_AI" data-toggle="tooltip" title="Mening telegram akkauntim"><i class="fa fa-telegram" style="font-size:24px;"></i> Telegram</a></li>
+
+    <li class="page-item"><a class="page-link" href="https://github.com/temirovv" data-toggle="tooltip2" title="Mening GitHub sahifam"><i class="fa fa-github" style="font-size:24px;color:gray;"></i> GitHub</a></li>
+    <li class="page-item"><a class="page-link" href="https://www.instagram.com/abduvohid1629/" data-toggle="tooltip3" title="Mening Instagram sahifam"><i class="fa fa-instagram" style="font-size:24px;"></i> Instagram</a></li>
+
+    <li class="page-item"><a class="page-link" href="https://t.me/joinchat/sm_69saWCzM4MzVi" data-toggle="tooltip4" title="Python guruhimga a‘zo bo‘ling"><i class="fa fa-group" style="font-size:24px;"></i> Python group</a></li>
+
+  </ul>
+</nav>
+
+<div class="container-fluid"><br></div>
+	<div class="container">
+			{% block content %}
+	
+			{% endblock content %}
+	</div>
+
+<script>
+	$(document).ready(function(){
+  	$('[data-toggle="home"]').tooltip();   
+	});
+
+	$(document).ready(function(){
+  	$('[data-toggle="tooltip"]').tooltip();   
+	});
+	$(document).ready(function(){
+  	$('[data-toggle="tooltip2"]').tooltip();   
+	});
+	$(document).ready(function(){
+  	$('[data-toggle="tooltip3"]').tooltip();   
+	});
+	$(document).ready(function(){
+  	$('[data-toggle="tooltip4"]').tooltip();   
+	});	
+</script>
+</body>
+</html>
